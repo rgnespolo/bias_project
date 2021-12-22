@@ -78,8 +78,8 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                 best_loss = loss
                 best_model_wts = copy.deepcopy(model.state_dict())
 
-        #save model each 25 epochs
-        torch.save(model, 'CADIS_weights_pupil_25.pt')
+        #save model each epoch
+        torch.save(model, 'CADIS_weights_temp_'+('epoch_{}_{}'.format(epoch, num_epochs))+'.pt')
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(
         time_elapsed // 60, time_elapsed % 60))

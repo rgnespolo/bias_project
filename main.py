@@ -8,6 +8,8 @@ from model import createDeepLabv3
 from trainer import train_model
 torch.cuda.empty_cache()
 
+# python main.py --data-directory CADIS --exp_directory CADIS --batch-size 4 --epochs 25
+
 @click.command()
 @click.option("--data-directory",
               required=True,
@@ -55,7 +57,7 @@ def main(data_directory, exp_directory, epochs, batch_size):
                     num_epochs=epochs)
 
     # Save the trained model
-    torch.save(model, exp_directory / 'CADIS_weights_pupil_25.pt')
+    torch.save(model, exp_directory / 'CADIS_weights_iris_25_final.pt')
 
 
 if __name__ == "__main__":
