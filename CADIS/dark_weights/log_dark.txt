@@ -1,0 +1,236 @@
+TypeError: train_model() got an unexpected keyword argument 'drop_last'
+PS C:\Users\MGS\Documents\GitHub\bias_project> python main.py --data-directory CADIS --exp_directory CADIS --batch-size 4 --epochs 25
+<torch.cuda.device object at 0x000001B06DD5EC40>
+Epoch 1/25
+----------
+<torch.cuda.device object at 0x000002938FB90490>
+<torch.cuda.device object at 0x0000026064C30490>
+<torch.cuda.device object at 0x0000025BE6BF1490>
+<torch.cuda.device object at 0x00000198071D1490>
+<torch.cuda.device object at 0x0000024A3F780490>
+<torch.cuda.device object at 0x00000218547A0490>
+<torch.cuda.device object at 0x0000024B2F240490>
+<torch.cuda.device object at 0x0000021DF9CE0490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:45<00:00,  1.17s/it]
+Train Loss: 0.0203
+<torch.cuda.device object at 0x0000015880CD0490>
+<torch.cuda.device object at 0x000001EF3F3F0490>
+<torch.cuda.device object at 0x0000015409920490>
+<torch.cuda.device object at 0x0000023727160490>
+<torch.cuda.device object at 0x0000026ECE770490>
+<torch.cuda.device object at 0x000001D52A470490>
+<torch.cuda.device object at 0x000002455D1F1490>
+<torch.cuda.device object at 0x0000016C070D0490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:12<00:00,  2.42it/s]
+Test Loss: 0.0198
+{'epoch': 1, 'Train_loss': 0.02028566785156727, 'Test_loss': 0.01978321373462677, 'Train_f1_score': 0.51829961738006, 'Train_auroc': 0.9651566203717953, 'Test_f1_score': 0.822266884456879
+6, 'Test_auroc': 0.9890292531501154}
+Epoch 2/25
+----------
+<torch.cuda.device object at 0x0000021771350490>
+<torch.cuda.device object at 0x000001F39F271490>
+<torch.cuda.device object at 0x000002062FEA0490>
+<torch.cuda.device object at 0x0000021530761490>
+<torch.cuda.device object at 0x000001F0DDF80490>
+<torch.cuda.device object at 0x0000028197FB1490>
+<torch.cuda.device object at 0x000001D2C4D10490>
+<torch.cuda.device object at 0x00000151DF811490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:47<00:00,  1.17s/it]
+Train Loss: 0.0175
+<torch.cuda.device object at 0x00000229C53F0490>
+<torch.cuda.device object at 0x0000023E69E21490>
+<torch.cuda.device object at 0x000001DC67F70490>
+<torch.cuda.device object at 0x000002AFA96D1490>
+<torch.cuda.device object at 0x000001B70A8E1490>
+<torch.cuda.device object at 0x0000028B9A4B1490>
+<torch.cuda.device object at 0x0000022CD9C51490>
+<torch.cuda.device object at 0x0000021113E11490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:13<00:00,  2.39it/s]
+Test Loss: 0.0187
+{'epoch': 2, 'Train_loss': 0.01746530644595623, 'Test_loss': 0.0187375470995903, 'Train_f1_score': 0.7100551416701042, 'Train_auroc': 0.9918982818859757, 'Test_f1_score': 0.86100416547476
+59, 'Test_auroc': 0.9897536282707928}
+Epoch 3/25
+----------
+<torch.cuda.device object at 0x00000240BC112490>
+<torch.cuda.device object at 0x000001AC3EBC1490>
+<torch.cuda.device object at 0x000001EA7C033490>
+<torch.cuda.device object at 0x0000021C2F512490>
+<torch.cuda.device object at 0x000002CCB9F81490>
+<torch.cuda.device object at 0x000001D65E931490>
+<torch.cuda.device object at 0x0000027B033A1490>
+<torch.cuda.device object at 0x000001FE04CD2490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:46<00:00,  1.17s/it]
+Train Loss: 0.0144
+<torch.cuda.device object at 0x000002786E742490>
+<torch.cuda.device object at 0x000001DC8C772490>
+<torch.cuda.device object at 0x000001D60DAD2490>
+<torch.cuda.device object at 0x0000026EF5D71490>
+<torch.cuda.device object at 0x000001BF61B51490>
+<torch.cuda.device object at 0x0000023FA07E1490>
+<torch.cuda.device object at 0x0000016A1C5C2490>
+<torch.cuda.device object at 0x0000020414012490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:24<00:00,  2.09it/s]
+Test Loss: 0.0115
+{'epoch': 3, 'Train_loss': 0.014406733214855194, 'Test_loss': 0.01152893342077732, 'Train_f1_score': 0.8017547945761941, 'Train_auroc': 0.9932305725074091, 'Test_f1_score': 0.873935421328
+1713, 'Test_auroc': 0.9897616196156812}
+Epoch 4/25
+----------
+<torch.cuda.device object at 0x000002EAD11D1490>
+<torch.cuda.device object at 0x000001E58E662490>
+<torch.cuda.device object at 0x000002B9E6AA2490>
+<torch.cuda.device object at 0x000002356E571490>
+<torch.cuda.device object at 0x00000203A8FE2490>
+<torch.cuda.device object at 0x000001C2D5E31490>
+<torch.cuda.device object at 0x0000022E10BA1490>
+<torch.cuda.device object at 0x000002224A492490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:43<00:00,  1.17s/it]
+Train Loss: 0.0117
+<torch.cuda.device object at 0x000002167D901490>
+<torch.cuda.device object at 0x0000021E2D021490>
+<torch.cuda.device object at 0x00000240C90F1490>
+<torch.cuda.device object at 0x000001FB539B2490>
+<torch.cuda.device object at 0x000001D269721490>
+<torch.cuda.device object at 0x00000209396D2490>
+<torch.cuda.device object at 0x000001E4EF7B1490>
+<torch.cuda.device object at 0x000001CD00AB1490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:12<00:00,  2.43it/s]
+Test Loss: 0.0122
+{'epoch': 4, 'Train_loss': 0.011721905320882797, 'Test_loss': 0.012225708924233913, 'Train_f1_score': 0.843509078341173, 'Train_auroc': 0.994047163167099, 'Test_f1_score': 0.8747322389037
+868, 'Test_auroc': 0.9899916510470496}
+Epoch 5/25
+----------
+<torch.cuda.device object at 0x00000184849F3490>
+<torch.cuda.device object at 0x00000130A78D1490>
+<torch.cuda.device object at 0x000001BAB8141490>
+<torch.cuda.device object at 0x000001B074252490>
+<torch.cuda.device object at 0x000001E8E8201490>
+<torch.cuda.device object at 0x00000185EDBD2490>
+<torch.cuda.device object at 0x0000029A408E3490>
+<torch.cuda.device object at 0x000002076E342490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:50<00:00,  1.18s/it]
+Train Loss: 0.0098
+<torch.cuda.device object at 0x00000236DAD11490>
+<torch.cuda.device object at 0x0000020761E91490>
+<torch.cuda.device object at 0x0000029C026A2490>
+<torch.cuda.device object at 0x000001FFE7511490>
+<torch.cuda.device object at 0x00000262EC921490>
+<torch.cuda.device object at 0x0000029401BF1490>
+<torch.cuda.device object at 0x000002C0213B2490>
+<torch.cuda.device object at 0x0000023BB7391490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:11<00:00,  2.48it/s]
+Test Loss: 0.0098
+{'epoch': 5, 'Train_loss': 0.009758503176271915, 'Test_loss': 0.009835665114223957, 'Train_f1_score': 0.8603861019877006, 'Train_auroc': 0.9945875361187578, 'Test_f1_score': 0.87402887481
+16786, 'Test_auroc': 0.9900741534436418}
+Epoch 6/25
+----------
+<torch.cuda.device object at 0x0000018D914E1490>
+<torch.cuda.device object at 0x00000232E9B61490>
+<torch.cuda.device object at 0x0000027667AA1490>
+<torch.cuda.device object at 0x000001E204941490>
+<torch.cuda.device object at 0x000002A43B192490>
+<torch.cuda.device object at 0x00000161F5602490>
+<torch.cuda.device object at 0x000001FDF5BA1490>
+<torch.cuda.device object at 0x00000271930F1490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:45<00:00,  1.17s/it]
+Train Loss: 0.0112
+<torch.cuda.device object at 0x000001DC900E2490>
+<torch.cuda.device object at 0x000001BA9B5B3490>
+<torch.cuda.device object at 0x000001366EBA2490>
+<torch.cuda.device object at 0x000001D1A28D2490>
+<torch.cuda.device object at 0x00000212B3D81490>
+<torch.cuda.device object at 0x000002680E3A2490>
+<torch.cuda.device object at 0x000001B1A5EA2490>
+<torch.cuda.device object at 0x0000029C0DC02490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:11<00:00,  2.45it/s]
+Test Loss: 0.0097
+{'epoch': 6, 'Train_loss': 0.011169581674039364, 'Test_loss': 0.009702303446829319, 'Train_f1_score': 0.8694744440760486, 'Train_auroc': 0.9950171554354433, 'Test_f1_score': 0.87744806479
+75396, 'Test_auroc': 0.9900675588100858}
+Epoch 7/25
+----------
+<torch.cuda.device object at 0x0000023128382490>
+<torch.cuda.device object at 0x0000017543231490>
+<torch.cuda.device object at 0x00000206DE9C1490>
+<torch.cuda.device object at 0x0000028C69431490>
+<torch.cuda.device object at 0x000002CA0CEE1490>
+<torch.cuda.device object at 0x0000024B01DF2490>
+<torch.cuda.device object at 0x00000264B7811490>
+<torch.cuda.device object at 0x000002179A461490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:39<00:00,  1.16s/it]
+Train Loss: 0.0090
+<torch.cuda.device object at 0x000002947CE01490>
+<torch.cuda.device object at 0x00000202CE1E2490>
+<torch.cuda.device object at 0x00000201E2D41490>
+<torch.cuda.device object at 0x000001BCEBFF1490>
+<torch.cuda.device object at 0x00000264F7331490>
+<torch.cuda.device object at 0x000002BB91612490>
+<torch.cuda.device object at 0x000001FFDEED1490>
+<torch.cuda.device object at 0x000002259BCC1490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:20<00:00,  2.18it/s]
+Test Loss: 0.0085
+{'epoch': 7, 'Train_loss': 0.008981211110949516, 'Test_loss': 0.00849707517772913, 'Train_f1_score': 0.8756436042683138, 'Train_auroc': 0.9956539079927608, 'Test_f1_score': 0.882669778216
+9444, 'Test_auroc': 0.9896997172729598}
+Epoch 8/25
+----------
+<torch.cuda.device object at 0x0000027DB4E82490>
+<torch.cuda.device object at 0x000002964C791490>
+<torch.cuda.device object at 0x000001E49E461490>
+<torch.cuda.device object at 0x00000144CAB22490>
+<torch.cuda.device object at 0x000002A8F5DB1490>
+<torch.cuda.device object at 0x000001F4711F2490>
+<torch.cuda.device object at 0x000002B5AB441490>
+<torch.cuda.device object at 0x000001BA9E911490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:45<00:00,  1.17s/it]
+Train Loss: 0.0075
+<torch.cuda.device object at 0x0000014BBE322490>
+<torch.cuda.device object at 0x000002318E7F2490>
+<torch.cuda.device object at 0x000001D7F0A22490>
+<torch.cuda.device object at 0x000001F370741490>
+<torch.cuda.device object at 0x000001C1E9992490>
+<torch.cuda.device object at 0x000001D889D62490>
+<torch.cuda.device object at 0x000001CE2FB71490>
+<torch.cuda.device object at 0x000002882BBE2490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:12<00:00,  2.42it/s]
+Test Loss: 0.0089
+{'epoch': 8, 'Train_loss': 0.007454204838722944, 'Test_loss': 0.008939066901803017, 'Train_f1_score': 0.8805418012386003, 'Train_auroc': 0.9960834381959138, 'Test_f1_score': 0.87802927281
+53147, 'Test_auroc': 0.9897256165538102}
+Epoch 9/25
+----------
+<torch.cuda.device object at 0x000002C8D9F31490>
+<torch.cuda.device object at 0x00000219B7832490>
+<torch.cuda.device object at 0x0000026407BA2490>
+<torch.cuda.device object at 0x0000020BF5622490>
+<torch.cuda.device object at 0x0000017F5FD61490>
+<torch.cuda.device object at 0x000001AB1E5D2490>
+<torch.cuda.device object at 0x0000026962371490>
+<torch.cuda.device object at 0x000001F8DB2D3490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 706/706 [13:41<00:00,  1.16s/it]
+Train Loss: 0.0089
+<torch.cuda.device object at 0x000002039BA01490>
+<torch.cuda.device object at 0x0000011DC49F1490>
+<torch.cuda.device object at 0x0000020E798C2490>
+<torch.cuda.device object at 0x0000023C21692490>
+<torch.cuda.device object at 0x0000026FE66D2490>
+<torch.cuda.device object at 0x00000241F2161490>
+<torch.cuda.device object at 0x0000027E76D41490>
+<torch.cuda.device object at 0x0000021E77761490>
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 176/176 [01:13<00:00,  2.40it/s]
+Test Loss: 0.0082
+{'epoch': 9, 'Train_loss': 0.008918371982872486, 'Test_loss': 0.008170115761458874, 'Train_f1_score': 0.8840271892260292, 'Train_auroc': 0.9965100850856969, 'Test_f1_score': 0.87712939554
+96671, 'Test_auroc': 0.9893385123887337}
+Epoch 10/25
+----------
+<torch.cuda.device object at 0x000002A6F2561490>
+<torch.cuda.device object at 0x00000224A9B22490>
+<torch.cuda.device object at 0x0000024983002490>
+<torch.cuda.device object at 0x000001F42D8B1490>
+<torch.cuda.device object at 0x0000025FBB692490>
+<torch.cuda.device object at 0x00000283D4931490>
+<torch.cuda.device object at 0x000001F1F1132490>
+ 29%|██████████████████████████████████████████                                                                                                         | 202/706 [04:07<10:16,  1.22s/it] 
+
+Aborted!
+PS C:\Users\MGS\Documents\GitHub\bias_project> python main.py --data-directory CADIS --exp_directory CADIS --batch-size 4 --epochs 25
+<torch.cuda.device object at 0x000001B5BBD6EC40>
+Epoch 1/25
+----------
+<torch.cuda.device object at 0x000001FBC78B1490>

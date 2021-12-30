@@ -4,9 +4,11 @@ import cv2
 import pandas as pd
 import numpy as np
 from skimage.transform import resize
+import os
+
 
 # Load the trained model
-model = torch.load('./CADIS/CADIS_weights_iris_2_final.pt')
+model = torch.load('./CADIS/iris weights/CADIS_weights_iris_good_epoch_2_lr5.pt')
 # Set the model to evaluate mode
 model.eval()
 
@@ -25,26 +27,34 @@ ino = 2
 # mask = cv2.imread(f'./CrackForest/Masks/{ino:03d}_label.PNG')
 # pupil
 #img = cv2.imread(f'./CADIS/Images/Video1_frame000090.png')
-img = cv2.imread(f'./CADIS/test8.jpg')
-img_orig = cv2.resize(img, (256, 256))
-img = cv2.cvtColor(img_orig, cv2.COLOR_BGR2RGB)
-img = img.transpose(2, 0, 1).reshape(1, 3, 256, 256)
-mask = cv2.imread(f'./CADIS/Masks_iris/Video1_frame000090.png')
-# prediction
-with torch.no_grad():
-    a = model(torch.from_numpy(img).type(torch.cuda.FloatTensor) / 255)
 
-# Plot histogram of the prediction to find a suitable threshold. From the histogram a 0.1 looks like a good choice.
-# plt.hist(a['out'].data.cpu().numpy().flatten())
+your_path = './CADIS/bias_test_light'
+files = os.listdir(your_path)
+print(files)
 
-model_output = (a['out'].cpu().detach().numpy()[0][0] > 0.5)
-model_output = model_output.astype(np.uint8)  # convert to an unsigned byte
-model_output *= 255
-model_output = cv2.cvtColor(model_output, cv2.COLOR_GRAY2BGR)
-merged_figure = cv2.addWeighted(img_orig, 1, model_output, 0.1,0)
-merged_figure = cv2.resize(merged_figure, (int(1280/2), int(720/2)))
-cv2.imshow('final', merged_figure)
-cv2.waitKey(0)
+for file in files:
+    file_path = f'./CADIS/bias_test_light/'+file
+    print(file_path)
+    img = cv2.imread(file_path)
+    img_orig = cv2.resize(img, (256, 256))
+    img = cv2.cvtColor(img_orig, cv2.COLOR_BGR2RGB)
+    img = img.transpose(2, 0, 1).reshape(1, 3, 256, 256)
+    #mask = cv2.imread(f'./CADIS/Masks_iris/Video1_frame000090.png')
+    # prediction
+    with torch.no_grad():
+        a = model(torch.from_numpy(img).type(torch.cuda.FloatTensor) / 255)
+
+    # Plot histogram of the prediction to find a suitable threshold. From the histogram a 0.1 looks like a good choice.
+    # plt.hist(a['out'].data.cpu().numpy().flatten())
+
+    model_output = (a['out'].cpu().detach().numpy()[0][0] > 0.5)
+    model_output = model_output.astype(np.uint8)  # convert to an unsigned byte
+    model_output *= 255
+    model_output = cv2.cvtColor(model_output, cv2.COLOR_GRAY2BGR)
+    merged_figure = cv2.addWeighted(img_orig, 1, model_output, 0.1,0)
+    merged_figure = cv2.resize(merged_figure, (int(1280/2), int(720/2)))
+    cv2.imshow('final', merged_figure)
+    cv2.waitKey(0)
 
 
 

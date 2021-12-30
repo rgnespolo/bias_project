@@ -59,8 +59,12 @@ def get_dataloader_sep_folder(data_dir: str,
 
 
 def get_dataloader_single_folder(data_dir: str,
-                                 image_folder: str = 'Images',
-                                 mask_folder: str = 'Masks',
+                                 # image_folder: str = 'Images',
+                                 # mask_folder: str = 'Masks',
+                                 # image_folder: str = 'Images_light',
+                                 # mask_folder: str = 'Masks_light_iris',
+                                 image_folder: str = 'Images_dark',
+                                 mask_folder: str = 'Masks_dark_iris',
                                  fraction: float = 0.2,
                                  batch_size: int = 4):
     """Create train and test dataloader from a single directory containing
@@ -94,7 +98,8 @@ def get_dataloader_single_folder(data_dir: str,
         x: DataLoader(image_datasets[x],
                       batch_size=batch_size,
                       shuffle=True,
-                      num_workers=8)
+                      num_workers=8,
+                      drop_last= True) #drop last for uneven batch normalization
         for x in ['Train', 'Test']
     }
     return dataloaders
