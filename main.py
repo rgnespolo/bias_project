@@ -5,9 +5,11 @@ from sklearn.metrics import f1_score, roc_auc_score
 from torch.utils import data
 import datahandler
 from model import createDeepLabv3
-from trainer import train_model
+from trainer import train_model, eval_test_dataset_new
+
+
 torch.cuda.empty_cache()
-print(torch.cuda.device(0))
+#print(torch.cuda.device(0))
 # python main.py --data-directory CADIS --exp_directory CADIS --batch-size 4 --epochs 25
 
 @click.command()
@@ -49,6 +51,8 @@ def main(data_directory, exp_directory, epochs, batch_size):
     # Create the dataloader
     dataloaders = datahandler.get_dataloader_single_folder(
         data_directory, batch_size=batch_size)
+
+
     _ = train_model(model,
                     criterion,
                     dataloaders,

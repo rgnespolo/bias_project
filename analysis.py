@@ -8,7 +8,9 @@ import os
 
 
 # Load the trained model
-model = torch.load('./CADIS/iris weights/CADIS_weights_iris_good_epoch_2_lr5.pt')
+#model = torch.load('./CADIS/iris weights/CADIS_weights_iris_good_epoch_2_lr5.pt')
+#model = torch.load('./CADIS/light_weights/CADIS_weights_temp_epoch_6_25.pt')
+model = torch.load('./CADIS/dark_weights/CADIS_weights_temp_epoch_5_25.pt')
 # Set the model to evaluate mode
 model.eval()
 
@@ -28,12 +30,14 @@ ino = 2
 # pupil
 #img = cv2.imread(f'./CADIS/Images/Video1_frame000090.png')
 
-your_path = './CADIS/bias_test_light'
+your_path = './CADIS/Images_light/'
 files = os.listdir(your_path)
 print(files)
 
 for file in files:
-    file_path = f'./CADIS/bias_test_light/'+file
+    # file_path = f'./CADIS/bias_test_light/'+file
+    # file_path = f'./CADIS/bias_test_light/' + file
+    file_path = f'./CADIS/Images_light/' + file
     print(file_path)
     img = cv2.imread(file_path)
     img_orig = cv2.resize(img, (256, 256))

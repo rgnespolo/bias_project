@@ -82,7 +82,7 @@ def get_dataloader_single_folder(data_dir: str,
         Train and Test dataloaders.
     """
 
-    data_transforms = transforms.Compose([transforms.Resize(256),transforms.ToTensor()])
+    data_transforms = transforms.Compose([transforms.Resize(256), transforms.ToTensor()])
 
     image_datasets = {
         x: SegmentationDataset(data_dir,
@@ -99,7 +99,54 @@ def get_dataloader_single_folder(data_dir: str,
                       batch_size=batch_size,
                       shuffle=True,
                       num_workers=8,
-                      drop_last= True) #drop last for uneven batch normalization
+                      drop_last=True)  # drop last for uneven batch normalization
+        for x in ['Train', 'Test']
+    }
+    return dataloaders
+
+
+def get_dataloader_single_folder_eval(data_dir: str,
+                                      # image_folder: str = 'Images',
+                                      # mask_folder: str = 'Masks',
+                                      image_folder: str = 'Images_light',
+                                      mask_folder: str = 'Masks_light_iris',
+                                      # image_folder: str = 'Images_dark',
+                                      # mask_folder: str = 'Masks_dark_iris',
+                                      fraction: float = 0,
+                                      batch_size: int = 4):
+    """Create train and test dataloader from a single directory containing
+    the image and mask folders.
+
+    Args:
+        data_dir (str): Data directory path or root
+        image_folder (str, optional): Image folder name. Defaults to 'Images'.
+        mask_folder (str, optional): Mask folder name. Defaults to 'Masks'.
+        fraction (float, optional): Fraction of Test set. Defaults to 0.2.
+        batch_size (int, optional): Dataloader batch size. Defaults to 4.
+
+    Returns:
+        dataloaders: Returns dataloaders dictionary containing the
+        Train and Test dataloaders.
+    """
+
+    data_transforms = transforms.Compose([transforms.Resize(256), transforms.ToTensor()])
+
+    image_datasets = {
+        x: SegmentationDataset(data_dir,
+                               image_folder=image_folder,
+                               mask_folder=mask_folder,
+                               seed=100,
+                               fraction=fraction,
+                               subset=x,
+                               transforms=data_transforms)
+        for x in ['Train', 'Test']
+    }
+    dataloaders = {
+        x: DataLoader(image_datasets[x],
+                      batch_size=batch_size,
+                      shuffle=True,
+                      num_workers=8,
+                      drop_last=True)  # drop last for uneven batch normalization
         for x in ['Train', 'Test']
     }
     return dataloaders

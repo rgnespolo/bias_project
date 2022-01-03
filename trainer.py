@@ -2,7 +2,7 @@ import copy
 import csv
 import os
 import time
-
+from sklearn.metrics import f1_score, roc_auc_score
 import numpy as np
 import torch
 from tqdm import tqdm
@@ -54,7 +54,7 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
                         if name == 'f1_score':
                             # Use a classification threshold of 0.1
                             batchsummary[f'{phase}_{name}'].append(
-                                metric(y_true > 0, y_pred > 0.1))
+                                metric(y_true > 0, y_pred > 0.5))
                         else:
                             batchsummary[f'{phase}_{name}'].append(
                                 metric(y_true.astype('uint8'), y_pred))
@@ -88,3 +88,39 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath,
     # load best model weights
     model.load_state_dict(best_model_wts)
     return model
+
+
+
+def eval_test_dataset_new(model, dataloaders):
+    # Use gpu if available
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    # Initialize the log file for training and testing loss and metrics
+    list_f1_score = []
+    list_auroc = []
+    for epoch in range(1):
+        print('Evaluating whole test dataset')
+        model.eval()  # Set model to evaluate mode
+            # Iterate over data.
+        for sample in tqdm(iter(dataloaders['Train'])):
+            inputs = sample['image'].to(device)
+            masks = sample['mask'].to(device)
+            outputs = model(inputs)
+            y_pred = outputs['out'].data.cpu().numpy().ravel()
+            y_true = masks.data.cpu().numpy().ravel()
+            # print(y_pred)
+            # print(y_true)
+
+            f1 = (f1_score(y_true > 0, y_pred > 0.5))
+            try:
+                auroc = roc_auc_score(y_true.astype('uint8'), y_pred)
+            except ValueError:
+                auroc = 0
+
+            list_f1_score.append(f1)
+            list_auroc.append(auroc)
+            print ('f1_score %f - auroc %f' % (f1, auroc))
+        f1_mean = np.mean(list_f1_score)
+        auroc_mean = np.mean(list_auroc)
+        print('F1 mean - %f' % f1_mean)
+        print('AUROC mean - %f' % auroc_mean)
