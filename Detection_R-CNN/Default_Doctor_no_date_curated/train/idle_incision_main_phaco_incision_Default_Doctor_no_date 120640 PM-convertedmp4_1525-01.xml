@@ -1,0 +1,26 @@
+<annotation>
+    <folder>valid</folder>
+    <filename>idle_incision_main_phaco_incision_Cortina Jul 21, 2020 120640 PM-convertedmp4_1525-01.png</filename>
+    <path>E:\NGENUITY Videos 072020\Cortina\Cortina - Jul 21, 2020\detecto_curated\valid\idle_incision_main_phaco_incision_Cortina Jul 21, 2020 120640 PM-convertedmp4_1525-01.png</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>480</width>
+        <height>270</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>idle</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>118</xmin>
+            <ymin>15</ymin>
+            <xmax>325</xmax>
+            <ymax>208</ymax>
+        </bndbox>
+    </object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>valid</folder>
+	<filename>incision_capsulorhexis_Cortina Jul 21, 2020 084234 AM-convertedmp4_4766-01.png</filename>
+	<path>D:\GitHub\Rogerio Nespolo\Thesis_Nespolo\CNN_training\cortina_curated\valid\incision_capsulorhexis_Cortina Jul 21, 2020 084234 AM-convertedmp4_4766-01.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>270</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>incision_capsulorhexis</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>163</xmin>
+			<ymin>32</ymin>
+			<xmax>276</xmax>
+			<ymax>157</ymax>
+		</bndbox>
+	</object>
+</annotation>

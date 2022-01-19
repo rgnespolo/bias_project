@@ -1,0 +1,26 @@
+<annotation>
+    <folder>valid</folder>
+    <filename>phacoemulsification_general_Cortina Jul 21, 2020 015847 PM-convertedmp4_7724-01.png</filename>
+    <path>E:\NGENUITY Videos 072020\Cortina\Cortina - Jul 21, 2020\detecto_curated\valid\phacoemulsification_general_Cortina Jul 21, 2020 015847 PM-convertedmp4_7724-01.png</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>480</width>
+        <height>270</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>phacoemulsification_general</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>145</xmin>
+            <ymin>0</ymin>
+            <xmax>286</xmax>
+            <ymax>147</ymax>
+        </bndbox>
+    </object>
+</annotation>

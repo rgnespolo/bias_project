@@ -1,0 +1,37 @@
+<annotation>
+    <folder>valid</folder>
+    <filename>Video20_frame000560-05.png</filename>
+    <path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\CADIS\dark_aug\valid\Video20_frame000560-05.png</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>960</width>
+        <height>540</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>iris</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>180</xmin>
+            <ymin>16</ymin>
+            <xmax>546</xmax>
+            <ymax>480</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pupil</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>205</xmin>
+            <ymin>45</ymin>
+            <xmax>515</xmax>
+            <ymax>442</ymax>
+        </bndbox>
+    </object>
+</annotation>

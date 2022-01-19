@@ -1,0 +1,37 @@
+<annotation>
+    <folder>valid</folder>
+    <filename>Video23_frame011010-25.png</filename>
+    <path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\CADIS\light_aug\valid\Video23_frame011010-25.png</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>960</width>
+        <height>540</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>iris</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>146</xmin>
+            <ymin>42</ymin>
+            <xmax>534</xmax>
+            <ymax>524</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pupil</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>198</xmin>
+            <ymin>116</ymin>
+            <xmax>477</xmax>
+            <ymax>488</ymax>
+        </bndbox>
+    </object>
+</annotation>

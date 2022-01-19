@@ -1,0 +1,37 @@
+<annotation>
+    <folder>train</folder>
+    <filename>Video4_frame000990-24.png</filename>
+    <path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\CADIS\light_aug\train\Video4_frame000990-24.png</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>960</width>
+        <height>540</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>iris</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>270</xmin>
+            <ymin>26</ymin>
+            <xmax>752</xmax>
+            <ymax>490</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>pupil</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>325</xmin>
+            <ymin>85</ymin>
+            <xmax>679</xmax>
+            <ymax>444</ymax>
+        </bndbox>
+    </object>
+</annotation>

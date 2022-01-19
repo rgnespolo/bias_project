@@ -11,6 +11,7 @@
 *.png
 *.jpg
 
+/Iris analysis software/DIATv1.zip
 .vscode
 **/.ipynb_checkpoints
 **/weights.pt

@@ -1,0 +1,26 @@
+<annotation>
+    <folder>valid</folder>
+    <filename>incision_capsulorhexis_Cortina Jul 21, 2020 093825 AM-convertedmp4_5210-00.png</filename>
+    <path>E:\NGENUITY Videos 072020\Cortina\Cortina - Jul 21, 2020\detecto_curated\valid\incision_capsulorhexis_Cortina Jul 21, 2020 093825 AM-convertedmp4_5210-00.png</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>480</width>
+        <height>270</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>incision_capsulorhexis</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>201</xmin>
+            <ymin>123</ymin>
+            <xmax>295</xmax>
+            <ymax>235</ymax>
+        </bndbox>
+    </object>
+</annotation>

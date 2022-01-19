@@ -1,0 +1,26 @@
+<annotation>
+	<folder>idle</folder>
+	<filename>idle_incision_viscoelastic_gel_injection_Cortina Jul 21, 2020 093825 AMmov_3342.png</filename>
+	<path>E:\NGENUITY Videos 072020\Cortina\Cortina - Jul 21, 2020\detecto_curated\train\idle\idle_incision_viscoelastic_gel_injection_Cortina Jul 21, 2020 093825 AMmov_3342.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>360</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>idle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>234</xmin>
+			<ymin>101</ymin>
+			<xmax>402</xmax>
+			<ymax>259</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>phacoemulsification_general</folder>
+	<filename>phacoemulsification_quadrant_removal_Cortina Jul 21, 2020 110037 AM-convertedmp4_3597.png</filename>
+	<path>E:\NGENUITY Videos 072020\Cortina\Cortina - Jul 21, 2020\detecto_curated\train\phacoemulsification_general\phacoemulsification_quadrant_removal_Cortina Jul 21, 2020 110037 AM-convertedmp4_3597.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>270</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>phacoemulsification_general</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>212</xmin>
+			<ymin>15</ymin>
+			<xmax>312</xmax>
+			<ymax>119</ymax>
+		</bndbox>
+	</object>
+</annotation>

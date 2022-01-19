@@ -1,0 +1,26 @@
+<annotation>
+	<folder>valid</folder>
+	<filename>phacoemulsification_cortex_removal_IA_Cortina Jul 21, 2020 085235 AM-convertedmp4_7283-00.png</filename>
+	<path>D:\GitHub\Rogerio Nespolo\Thesis_Nespolo\CNN_training\cortina_curated\valid\phacoemulsification_cortex_removal_IA_Cortina Jul 21, 2020 085235 AM-convertedmp4_7283-00.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>270</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cortex_removal</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>277</xmin>
+			<ymin>25</ymin>
+			<xmax>430</xmax>
+			<ymax>154</ymax>
+		</bndbox>
+	</object>
+</annotation>
