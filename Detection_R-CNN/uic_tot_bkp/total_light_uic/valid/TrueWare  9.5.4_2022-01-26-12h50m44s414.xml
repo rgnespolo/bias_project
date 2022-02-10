@@ -1,0 +1,38 @@
+<annotation>
+	<folder>light</folder>
+	<filename>TrueWare	9.5.4_2022-01-26-12h50m44s414.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\light\TrueWare	9.5.4_2022-01-26-12h50m44s414.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>559</xmin>
+			<ymin>353</ymin>
+			<xmax>1021</xmax>
+			<ymax>844</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>507</xmin>
+			<ymin>288</ymin>
+			<xmax>1079</xmax>
+			<ymax>883</ymax>
+		</bndbox>
+	</object>
+</annotation>

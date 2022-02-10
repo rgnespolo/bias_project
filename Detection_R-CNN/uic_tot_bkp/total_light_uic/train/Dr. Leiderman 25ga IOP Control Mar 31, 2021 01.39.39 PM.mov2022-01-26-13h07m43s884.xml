@@ -1,0 +1,38 @@
+<annotation>
+	<folder>light</folder>
+	<filename>Dr. Leiderman 25ga IOP Control Mar 31, 2021 01.39.39 PM.mov2022-01-26-13h07m43s884.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\light\Dr. Leiderman 25ga IOP Control Mar 31, 2021 01.39.39 PM.mov2022-01-26-13h07m43s884.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>870</xmin>
+			<ymin>351</ymin>
+			<xmax>1094</xmax>
+			<ymax>596</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>769</xmin>
+			<ymin>247</ymin>
+			<xmax>1203</xmax>
+			<ymax>673</ymax>
+		</bndbox>
+	</object>
+</annotation>

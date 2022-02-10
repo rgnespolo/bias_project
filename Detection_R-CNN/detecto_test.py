@@ -4,20 +4,26 @@ from detecto import core, utils, visualize
 from torchvision import transforms
 import xml.etree.cElementTree as et
 import csv
-
+import pandas as pd
+import random
 metrics_file = open('log_rcnn_metrics.csv', 'a', newline='')
 writer = csv.writer(metrics_file)
 
 print('Checking CUDA - ' + str(torch.cuda.is_available()))
 
 model = core.Model.load(
-    r'cadis_light_and_dark_all_no_aug.pth', ['iris', 'pupil'])
-# r'cadis_light_with_pupil.pth',[ 'iris', 'pupil'])
+    r'all_but_dark_brown5.pth', ['iris', 'pupil'])
+#'cadis_light_with_pupil.pth',[ 'iris', 'pupil'])
 
+# #make for here for different sets
+# for i in range(10):
 
-your_path = './CADIS/test_xml/'
-files = filter(lambda x: x.endswith(('.png', '.jpg')), os.listdir(your_path))
-
+your_path = './Total_dark_uic+public/dark brown/' #all to test bootstrap-like
+files = list(filter(lambda x: x.endswith(('.png', '  .jpg')), os.listdir(your_path)))
+# random.shuffle(files)
+# files = files[:-int(len(files)/1.3)]
+# print(len(files))
+# print(files)
 
 def bb_intersection_over_union(boxA, boxB):
     # determine the (x, y)-coordinates of the intersection rectangle
@@ -43,13 +49,12 @@ def bb_intersection_over_union(boxA, boxB):
     return iou, precision, recall
 
 
-
+all_images_log = []
 for file in files:
     file_path = your_path + file
     image = utils.read_image(file_path)
     predictions = model.predict_top(image)
     labels, boxes, scores = predictions
-
 
     # -------------------   extract all annotations from xml
     xml_file = file_path[:-4] + '.xml'
@@ -74,28 +79,41 @@ for file in files:
         ymax_list.append(ymax.text)
     print('objects extracted from xml: ' + str(objects_list))
 
+
+
     for i in objects_list:
-        index_detected = labels.index(i)
-        box = boxes[index_detected]
-        x1 = int(box[0])
-        x2 = int(box[2])
-        y1 = int(box[1])
-        y2 = int(box[3])
-        boxA = [x1, y1, x2, y2]
-        index_annotated = objects_list.index(i)
-        x1_xml = int(xmin_list[index_detected])
-        x2_xml = int(xmax_list[index_detected])
-        y1_xml = int(ymin_list[index_detected])
-        y2_xml = int(ymax_list[index_detected])
-        boxB = [x1_xml, y1_xml, x2_xml, y2_xml]
+        try:
+            index_detected = labels.index(i)
+            box = boxes[index_detected]
+            x1 = int(box[0])
+            x2 = int(box[2])
+            y1 = int(box[1])
+            y2 = int(box[3])
+            boxA = [x1, y1, x2, y2]
+            index_annotated = objects_list.index(i)
+            x1_xml = int(xmin_list[index_detected])
+            x2_xml = int(xmax_list[index_detected])
+            y1_xml = int(ymin_list[index_detected])
+            y2_xml = int(ymax_list[index_detected])
+            boxB = [x1_xml, y1_xml, x2_xml, y2_xml]
 
-        iou, precision, recall = bb_intersection_over_union(boxA, boxB)
-        print(i)
-        print('iou: ' + str(iou) + ' precision: ' + str(precision) + ' recall: ' + str(recall))
-        writer.writerow([file_path, i, iou,precision,recall, scores[index_detected].numpy()])
-        #save to csv here - append
+            iou, precision, recall = bb_intersection_over_union(boxA, boxB)
+            print(i)
+            print('iou: ' + str(iou) + ' precision: ' + str(precision) + ' recall: ' + str(recall))
+            f1_score = (2*(precision*recall))/(precision + recall)
+            all_images_log.append([file_path, i, iou, precision, recall, f1_score, scores[index_detected].numpy()])
+            #writer.writerow([file_path, i, iou, precision, recall, scores[index_detected].numpy()])
+        except:
+            pass
+df = pd.DataFrame(all_images_log, columns=['file_path', 'object', 'iou','precision','recall','f1_score', 'score'])
+df_pupil = (df.query('`object` == "pupil"'))
+df_iris = (df.query('`object` == "iris"'))
+df.to_csv('out.csv')
+print(df.mean())
+print(df_pupil.mean())
+print(df_iris.mean())
 
-    visualize.show_labeled_image(image, boxes, labels)
+    #visualize.show_labeled_image(image, boxes, labels)
 
 
 
@@ -107,20 +125,20 @@ for file in files:
 
 
 
-    # top = torch.topk(predictions, 2)
-    # predictions format: (labels, boxes, scores)
+# top = torch.topk(predictions, 2)
+# predictions format: (labels, boxes, scores)
 
-    # ['alien', 'bat', 'bat']
+# ['alien', 'bat', 'bat']
 
-    #           xmin       ymin       xmax       ymax
-    # tensor([[ 569.2125,  203.6702, 1003.4383,  658.1044],
-    #         [ 276.2478,  144.0074,  579.6044,  508.7444],
-    #         [ 277.2929,  162.6719,  627.9399,  511.9841]])
+#           xmin       ymin       xmax       ymax
+# tensor([[ 569.2125,  203.6702, 1003.4383,  658.1044],
+#         [ 276.2478,  144.0074,  579.6044,  508.7444],
+#         [ 277.2929,  162.6719,  627.9399,  511.9841]])
 
-    # tensor([0.9952, 0.9837, 0.5153])
-    # labels = labels[0:1]
-    # boxes = torch.topk(boxes, 2)
-    # scores = torch.topk(scores, 2)
-    # print(labels)
-    # print(boxes)
-    # print(scores)
+# tensor([0.9952, 0.9837, 0.5153])
+# labels = labels[0:1]
+# boxes = torch.topk(boxes, 2)
+# scores = torch.topk(scores, 2)
+# print(labels)
+# print(boxes)
+# print(scores)

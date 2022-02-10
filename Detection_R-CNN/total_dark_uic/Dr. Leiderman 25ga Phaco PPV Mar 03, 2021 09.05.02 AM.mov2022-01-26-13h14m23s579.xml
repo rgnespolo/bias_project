@@ -1,0 +1,38 @@
+<annotation>
+	<folder>dark</folder>
+	<filename>Dr. Leiderman 25ga Phaco PPV Mar 03, 2021 09.05.02 AM.mov2022-01-26-13h14m23s579.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\dark\Dr. Leiderman 25ga Phaco PPV Mar 03, 2021 09.05.02 AM.mov2022-01-26-13h14m23s579.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1001</xmin>
+			<ymin>409</ymin>
+			<xmax>1483</xmax>
+			<ymax>928</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>939</xmin>
+			<ymin>349</ymin>
+			<xmax>1600</xmax>
+			<ymax>978</ymax>
+		</bndbox>
+	</object>
+</annotation>
