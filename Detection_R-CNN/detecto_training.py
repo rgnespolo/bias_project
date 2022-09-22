@@ -15,8 +15,8 @@ augmentations = transforms.Compose([
 # dataset = core.Dataset(r'C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\CADIS\all_no_aug\train', transform=augmentations)
 # val_dataset = core.Dataset(r'C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\CADIS\all_no_aug\valid')
 
-dataset = core.Dataset(r'C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\all_but_dark_brown\train', transform=augmentations)
-val_dataset = core.Dataset(r'C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\all_but_dark_brown\valid')
+dataset = core.Dataset(r'C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\organized_dataset\UIC\total_light_uic\train', transform=augmentations)
+val_dataset = core.Dataset(r'C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\organized_dataset\UIC\total_light_uic\valid')
 
 loader = core.DataLoader(dataset, batch_size=2, shuffle=True)
 
@@ -33,4 +33,4 @@ plt.plot(losses)
 plt.show()
 
 
-model.save('all_but_dark_brown.pth')
+model.save('total_light_uic_.pth')

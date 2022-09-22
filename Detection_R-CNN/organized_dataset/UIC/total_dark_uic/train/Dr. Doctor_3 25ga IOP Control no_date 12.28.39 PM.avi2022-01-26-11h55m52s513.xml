@@ -1,0 +1,38 @@
+<annotation>
+	<folder>dark</folder>
+	<filename>Dr. Doctor_3 25ga IOP Control no_date 12.28.39 PM.avi2022-01-26-11h55m52s513.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\dark\Dr. Doctor_3 25ga IOP Control no_date 12.28.39 PM.avi2022-01-26-11h55m52s513.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>448</xmin>
+			<ymin>281</ymin>
+			<xmax>1060</xmax>
+			<ymax>877</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>357</xmin>
+			<ymin>197</ymin>
+			<xmax>1134</xmax>
+			<ymax>924</ymax>
+		</bndbox>
+	</object>
+</annotation>

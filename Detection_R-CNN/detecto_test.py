@@ -11,14 +11,17 @@ writer = csv.writer(metrics_file)
 
 print('Checking CUDA - ' + str(torch.cuda.is_available()))
 
+weights = 'total_dark_uic_5.pth'
 model = core.Model.load(
-    r'all_but_dark_brown5.pth', ['iris', 'pupil'])
+#     'all4.pth', ['iris', 'pupil'])
+    weights, ['iris', 'pupil'])
 #'cadis_light_with_pupil.pth',[ 'iris', 'pupil'])
 
 # #make for here for different sets
 # for i in range(10):
 
-your_path = './Total_dark_uic+public/dark brown/' #all to test bootstrap-like
+#your_path = './Total_dark_uic+public/dark brown/' #all to test bootstrap-like
+your_path = './organized_dataset/UIC/total_light_uic/'
 files = list(filter(lambda x: x.endswith(('.png', '  .jpg')), os.listdir(your_path)))
 # random.shuffle(files)
 # files = files[:-int(len(files)/1.3)]
@@ -108,7 +111,7 @@ for file in files:
 df = pd.DataFrame(all_images_log, columns=['file_path', 'object', 'iou','precision','recall','f1_score', 'score'])
 df_pupil = (df.query('`object` == "pupil"'))
 df_iris = (df.query('`object` == "iris"'))
-df.to_csv('out.csv')
+df.to_csv('out_'+ weights + '_tested_on_' + your_path.replace('/', '_') + '.csv')
 print(df.mean())
 print(df_pupil.mean())
 print(df_iris.mean())

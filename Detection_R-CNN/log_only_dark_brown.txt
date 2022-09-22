@@ -1,0 +1,35 @@
+Loss: 0.24352312968535858
+Epoch 2 of 100
+Loss: 0.1894277303733609
+Epoch 3 of 100
+Loss: 0.1696921746161851
+Epoch 4 of 100
+Loss: 0.13767392323775726
+Epoch 5 of 100
+Loss: 0.14075009660287338
+Epoch 6 of 100
+Loss: 0.12546288340606473
+Epoch 7 of 100
+Loss: 0.11626230112530968
+Epoch 8 of 100
+Loss: 0.12123463946309956
+Epoch 9 of 100
+Loss: 0.11849249628457156
+Epoch 10 of 100
+Loss: 0.12500419772484087
+Epoch 11 of 100
+Loss: 0.12548010152849284
+Epoch 12 of 100
+Loss: 0.12253045764836398
+Epoch 13 of 100
+Loss: 0.12222742949697105
+Epoch 14 of 100
+Loss: 0.12230154330080206
+Epoch 15 of 100
+Loss: 0.12412957254458558
+Epoch 16 of 100
+Loss: 0.12118625251406973
+Traceback (most recent call last):
+  File "C:\Users\MGS\.conda\envs\pytorch\lib\site-packages\torch\serialization.py", line 364, in save
+
+Process finished with exit code -1
