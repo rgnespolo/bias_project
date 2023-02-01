@@ -1,0 +1,38 @@
+<annotation>
+	<folder>dark</folder>
+	<filename>Doctor_2 25ga Combine Phaco no_date 05.31.33 PM.avi2022-01-26-11h55m40s058.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\dark\Doctor_2 25ga Combine Phaco no_date 05.31.33 PM.avi2022-01-26-11h55m40s058.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>607</xmin>
+			<ymin>442</ymin>
+			<xmax>879</xmax>
+			<ymax>732</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>526</xmin>
+			<ymin>360</ymin>
+			<xmax>978</xmax>
+			<ymax>782</ymax>
+		</bndbox>
+	</object>
+</annotation>

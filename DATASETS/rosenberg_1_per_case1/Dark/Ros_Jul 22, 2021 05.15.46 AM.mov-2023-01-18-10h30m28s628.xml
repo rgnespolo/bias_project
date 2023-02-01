@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Dark</folder>
+	<filename>Ros_Jul 22, 2021 05.15.46 AM.mov-2023-01-18-10h30m28s628.jpeg</filename>
+	<path>C:\Users\MGS\OneDrive - University of Illinois at Chicago\Bias_project\Rosenberg\rosenberg_1_per_case1\Dark\Ros_Jul 22, 2021 05.15.46 AM.mov-2023-01-18-10h30m28s628.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>694</xmin>
+			<ymin>217</ymin>
+			<xmax>1101</xmax>
+			<ymax>614</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>638</xmin>
+			<ymin>131</ymin>
+			<xmax>1177</xmax>
+			<ymax>707</ymax>
+		</bndbox>
+	</object>
+</annotation>

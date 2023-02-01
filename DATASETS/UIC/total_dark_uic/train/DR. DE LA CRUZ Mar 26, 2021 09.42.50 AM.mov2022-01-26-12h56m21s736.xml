@@ -1,0 +1,38 @@
+<annotation>
+	<folder>dark</folder>
+	<filename>DR. DE LA CRUZ Mar 26, 2021 09.42.50 AM.mov2022-01-26-12h56m21s736.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\dark\DR. DE LA CRUZ Mar 26, 2021 09.42.50 AM.mov2022-01-26-12h56m21s736.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>401</xmin>
+			<ymin>178</ymin>
+			<xmax>971</xmax>
+			<ymax>742</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>321</xmin>
+			<ymin>68</ymin>
+			<xmax>1070</xmax>
+			<ymax>877</ymax>
+		</bndbox>
+	</object>
+</annotation>

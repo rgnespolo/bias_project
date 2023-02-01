@@ -1,0 +1,38 @@
+<annotation>
+	<folder>light</folder>
+	<filename>Doctor_2 25&amp; 27ga IOP Control no_date 01.59.15 PM.avi2022-01-26-11h54m27s496.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\light\Doctor_2 25&amp; 27ga IOP Control no_date 01.59.15 PM.avi2022-01-26-11h54m27s496.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>505</xmin>
+			<ymin>440</ymin>
+			<xmax>874</xmax>
+			<ymax>814</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>221</xmin>
+			<ymin>190</ymin>
+			<xmax>1120</xmax>
+			<ymax>1019</ymax>
+		</bndbox>
+	</object>
+</annotation>
