@@ -1,0 +1,38 @@
+<annotation>
+	<folder>dark</folder>
+	<filename>Default_Doctor_no_date 10.50.37 AM.mov2022-01-26-11h45m44s050.png</filename>
+	<path>C:\Users\MGS\Documents\GitHub\bias_project\Detection_R-CNN\UIC\only_NGENUITY\dark\Default_Doctor_no_date 10.50.37 AM.mov2022-01-26-11h45m44s050.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>743</xmin>
+			<ymin>308</ymin>
+			<xmax>1159</xmax>
+			<ymax>722</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>515</xmin>
+			<ymin>108</ymin>
+			<xmax>1318</xmax>
+			<ymax>964</ymax>
+		</bndbox>
+	</object>
+</annotation>
