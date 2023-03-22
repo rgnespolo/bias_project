@@ -1,0 +1,38 @@
+<annotation>
+	<folder>light brown</folder>
+	<filename>snap_2023-03-09 093111.png</filename>
+	<path>C:\Users\MGS\OneDrive - University of Illinois at Chicago\Bias_project\mex_dataset\light brown\snap_2023-03-09 093111.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>956</width>
+		<height>543</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pupil</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>365</xmin>
+			<ymin>127</ymin>
+			<xmax>627</xmax>
+			<ymax>397</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>iris</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>319</xmin>
+			<ymin>75</ymin>
+			<xmax>667</xmax>
+			<ymax>431</ymax>
+		</bndbox>
+	</object>
+</annotation>
